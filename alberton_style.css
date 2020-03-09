@@ -1,0 +1,243 @@
+body{
+	color: #000000 ;
+	font-family: 'Noto Sans', sans-serif ;
+}
+
+
+/* ---- set up site grid ---- */
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"header header"
+		"nav nav"
+		"main aside"
+		"footer footer";
+	grid-gap: 4px;	
+}
+
+
+header {
+	grid-area: header ;
+	background-color: #035c71; /* ---- dark teal ---- */
+	color: #fff;
+}	
+
+nav {
+	grid-area: nav ;
+	background-color: #2b7788; /* ---- mid dark teal ---- */
+	color: #fff;
+}
+
+main{
+	grid-area: main ;
+	background-color: #d1dadf; /* ---- light blue ---- */ 
+	padding: 20px;
+	text-align: center; 
+}	
+
+aside{
+	grid-area: aside ;
+	background-color: #56a3b5; /* ---- light teal ---- */
+	padding: 20px;
+}
+
+footer{
+	grid-area: footer ;
+	background-color: #024352; /* ---- darker teal ---- */
+	color: #fff;
+	text-align: right;
+}
+
+/* ---- grid for front page images ---- */
+
+.homeimages {
+	display: grid;
+	grid-template-columns: 250px 250px 250px 250px;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"albertonhouse ballroom"
+		"diningtable prettytrees";
+	grid-gap: 10px;
+	
+	width: 520px;
+	margin: auto;
+	padding: 5px;
+}
+
+
+.albertonhouse {grid-area: albertonhouse;}
+.ballroom {grid-area: ballroom;}
+.diningtable {grid-area: diningtable;}
+.prettytrees {grid-area: prettytrees;}
+
+/* ---- grid for events page ---- */
+
+.eventimages {
+	display: grid;
+	grid-template-columns: 250px 250px;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"ballroomevent mirror";
+	grid-gap: 10px;
+	
+	width: 520px;
+	margin: auto;
+	padding: 5px;
+}
+
+.ballroomevent {grid-area: ballroomevent;}
+.mirror {grid-area: mirror;}
+
+/* ---- grid for open times ---- */
+
+.opentimeimages {
+	display: grid;
+	grid-template-columns: 250px 250px;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"teacups cabinets";
+	grid-gap: 10px;
+	
+	width: 520px;
+	margin: auto;
+	padding: 5px;
+}
+
+.teacups {grid-area: teacups;}
+.cabinets {grid-area: cabinets;}
+
+/* ---- grid for gallery ---- */
+
+.gallery {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"fronthouse whitegate"
+		"sewing teatable"
+		"couch sewingmaterial"
+		"kitchen quainttable"
+		"statueglasses morestuff"
+		"harrysbedroom bedroom";
+	grid-gap: 10px;
+	
+	width: 520px;
+	margin: auto;
+	padding: 5px;
+}
+
+.fronthouse {grid-area: fronthouse;}
+.whitegate {grid-area: whitegate;}
+.sewing {grid-area: sewing;}
+.teatable {grid-area: teatable;}
+.couch {grid-area: couch;}
+.sewingmaterial {grid-area: sewingmaterial;}
+.kitchen {grid-area: kitchen;}
+.quainttable {grid-area: quainttable;}
+.statueglasses {grid-area: statueglasses;}
+.morestuff {grid-area: morestuff;}
+.harrysbedroom {grid-area: harrysbedroom;}
+.bedroom {grid-area: bedroom;}
+
+
+/* ---- General formatting ----*/
+
+a:link {color: #fff;}  /* same as headers dark teal */
+a:visited {color: #024352;} /* same as footers darker teal */
+a:hover {color: #d1dadf;} /* same as navs mid teal */
+ 
+
+nav a {text-decoration: none;} 
+nav a:link, nav a:visited {color: #fff;}
+nav a:hover {color: #d1dadf;} 
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #2b7788;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+/* customised from https://www.w3schools.com/css/css_dropdowns.asp */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #024352;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #024352}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #024352;
+}
+
+.box {
+	padding: 20px;
+	border-radius: 10px;
+}
+
+main ul {
+	list-style-position: inside;
+} 
+
+h1, h2{
+	font-family: 'Noto Serif', serif ;
+}
+
+h1 {
+	font-size: 200%;
+	padding-left: 150px;
+}
+
+img.roundleft {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 1px 0px 10px #024352;
+	float: left;
+}
+
+img.allround {
+	border-radius: 10px;
+}
+
+/* --- Google Form Styling --- */ 
+
+iframe {
+	width: 100%;
+	height: 754px;
+	margin: auto;
+	border: 0;
+}
